@@ -3,5 +3,5 @@ CREATE TABLE events (
     dog_id INTEGER REFERENCES dog_profile(id) ON DELETE CASCADE NOT NULL,
     note_type TEXT NOT NULL,
     event_note TEXT,
-    event_date DATE NOT NULL,
+    event_date DATE NOT NULL
 );

@@ -3,5 +3,5 @@ CREATE TABLE notes (
     dog_id INTEGER REFERENCES dog_profile(id) ON DELETE CASCADE NOT NULL,
     event_name TEXT NOT NULL,
     note TEXT,
-    note_type TEXT NOT NULL,
+    note_type TEXT NOT NULL
 );

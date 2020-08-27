@@ -5,5 +5,5 @@ CREATE TABLE reminders (
     reminder_date DATE NOT NULL,
     repeat BOOLEAN,
     reminder_type TEXT NOT NULL,
-    reminder_note TEXT NOT NULL,
+    reminder_note TEXT NOT NULL
 );

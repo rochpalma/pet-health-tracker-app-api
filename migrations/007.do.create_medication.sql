@@ -4,5 +4,5 @@ CREATE TABLE medication (
     dog_id INTEGER REFERENCES dog_profile(id) ON DELETE CASCADE NOT NULL,
     dosage_amount TEXT NOT NULL,
     dosage_unit TEXT NOT NULL,
-    medication_note TEXT NOT NULL,
+    medication_note TEXT NOT NULL
 );
