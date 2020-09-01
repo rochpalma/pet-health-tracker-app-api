@@ -10,7 +10,7 @@ const EventsService = {
     getEventsByUser(db, dog_id) {
       return(
         db.from('events').distinct('events.*','dog_profile.name')
-        .innerJoin('dog_profile','events.dog)_id', 'dog_profile.id')
+        .innerJoin('dog_profile','events.dog_id', 'dog_profile.id')
         .where('events.dog_id', dog_id)    
       )     
     },

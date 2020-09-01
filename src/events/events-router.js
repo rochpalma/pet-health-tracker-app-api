@@ -35,7 +35,7 @@ eventsRouter
   eventsRouter
   .route('/:event_id')
   .all((req, res, next) => {
-    EventsService.getDogById(req.app.get('db'), req.params.event_id).then(
+    EventsService.getEventById(req.app.get('db'), req.params.event_id).then(
       (event) => {
         if (!event) {
           return res
@@ -48,7 +48,7 @@ eventsRouter
     );
   })
   .get((req, res, next) => {
-    res.json(EventsService.serializeDog(res.event));
+    res.json(EventsService.serializeEvent(res.event));
   })
   .patch(jsonParser, (req, res, next) => {
     const {

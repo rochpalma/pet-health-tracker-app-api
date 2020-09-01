@@ -11,7 +11,6 @@ const eventsRouter = require('./events/events-router');
 const activitiesRouter = require('./activities/activities-router');
 const remindersRouter = require('./reminders/reminders-router');
 const notesRouter = require('./notes/notes-router');
-const remindersRouter = require('./reminders/reminders-router');
 const medicationsRouter = require('./medications/medications-router');
 const vaccinesRouter = require('./vaccines/vaccines-router');
 
@@ -25,15 +24,15 @@ app.use(morgan(morganOption))
 app.use(helmet());
 app.use(cors());
 
-// app.use('/api/auth', authRouter);
-// app.use('/api/users', usersRouter);
-// app.use('/api/dogs', dogsRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/dogs', dogsRouter);
 // app.use('/api/activities', activitiesRouter);
-// app.use('/api/events', eventsRouter);
-// app.use('/api/reminders', remindersRouter);
-// app.use('/api/notes', notesRouter);
-// app.use('/api/medications', medicationsRouter);
-// app.use('/api/vaccines', vaccinesRouter);
+app.use('/api/events', eventsRouter);
+app.use('/api/reminders', remindersRouter);
+app.use('/api/notes', notesRouter);
+app.use('/api/medications', medicationsRouter);
+app.use('/api/vaccines', vaccinesRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello, world!')
