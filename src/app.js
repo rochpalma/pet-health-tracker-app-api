@@ -35,7 +35,7 @@ app.use('/api/medications', medicationsRouter);
 app.use('/api/vaccines', vaccinesRouter);
 
 app.get('/', (req, res) => {
-    res.send('Hello, world!')
+    res.send('Hello, Pet Health Tracker User!')
 })
 
 app.use(function errorHandler(error, req, res, next) {
